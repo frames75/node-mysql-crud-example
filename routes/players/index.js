@@ -1,4 +1,21 @@
+const Player = require('../../bookshelf-models/player');
 const root_dir = '/players';
+
+module.exports = {
+    getHomePage: (req, res) => {
+        Player.fetchAll()
+        .then( (result) => { 
+            res.render('index.ejs', {
+                title: 'Welcome to Socka | View Players'
+                ,players: result.toJSON() });
+        }).catch( (err) => { 
+            res.redirect(root_dir + '/');
+            console.log(err); 
+        });
+    }
+};
+
+/*const root_dir = '/players';
 
 module.exports = {
     getHomePage: (req, res) => {
@@ -17,3 +34,4 @@ module.exports = {
     },
 };
 
+*/
