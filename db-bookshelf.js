@@ -11,5 +11,14 @@ const db_config = {
 
 const knex = require('knex')(db_config);
 
-module.exports = require('bookshelf')(knex);
+var bookshelf = require('bookshelf')(knex);
+/**** This lines don't work right. It's necessary to use 'pluggable'.
+const bookshelf_modelbase = require('bookshelf-modelbase')(bookshelf);
+const Player = bookshelf_modelbase.extend({
+	tableName: 'players'
+})
+*/
+bookshelf.plugin(require('bookshelf-modelbase').pluggable);
+
+module.exports = bookshelf;
 module.exports.knex = knex;
