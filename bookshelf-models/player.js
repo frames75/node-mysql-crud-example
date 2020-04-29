@@ -22,9 +22,8 @@ const Player = bookshelf.Model.extend({
 		this.on('saving', (model) => {
 			return Player.query(function(qb) {
 				qb.where('user_name','<>', model.get('user_name'))
-				.andWhere('first_name', model.get('first_name'))
-				.andWhere('last_name', model.get('last_name')); })
-
+					.andWhere('first_name', model.get('first_name'))
+					.andWhere('last_name', model.get('last_name')); })
 				.fetch({require:false})
 				.then( (player) => {
 					if (player !== null) {
