@@ -9,11 +9,11 @@
   "author": "carpanta",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "bookshelf": "^1.1.1",
     "bookshelf-modelbase": "^2.11.0",
     "ejs": "^3.1.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-fileupload": "^1.1.9",
     "knex": "^0.20.15",
     "mysql": "^2.18.1",
