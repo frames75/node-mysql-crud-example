@@ -9,7 +9,7 @@
   "author": "carpanta",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.2",
     "bookshelf": "^1.1.1",
     "bookshelf-modelbase": "^2.11.0",
     "ejs": "^3.1.2",
